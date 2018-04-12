@@ -13,7 +13,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   <!-- <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;' > -->
-  <a-scene embedded arjs>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
   	<!-- ASSETS -->
   	<a-assets>
 		<a-asset-item id="ring" src="assets/ring.gltf"></a-asset-item>
@@ -22,7 +22,14 @@
 	
 	<!-- CONTENT AREA --> 
 	<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>  -->  
-    <a-entity gltf-model="#ring" scale="0.01 0.01 0.01" rotation="-73.96885135138928 -163.3502673917977 75.11476694165093"></a-entity>
+   <a-entity gltf-model="#ring" scale="0.01 0.01 0.01" rotation="-73.969 -163.35 75.115" position="-0.237 1.042 -0.184">
+   	<a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite">
+	</a-animation>
+   </a-entity>
 	<!-- <a-video src="#aboutvid" width="3" height="2" position="0 0 0" rotation="-90 0 0"></a-video> -->
 
 	<!-- CAMERA -->
