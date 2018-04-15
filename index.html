@@ -8,6 +8,8 @@
 	<!-- include ar.js for A-Frame -->
 	<script src="js/aframe-ar.min.js"></script>
 	<script src="https://app.aframe.com/embed/2.0/embedder.js"></script>
+	<script src='https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js'>
+	</script>
 
 </head>
 
@@ -16,13 +18,13 @@
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
   	<!-- ASSETS -->
   	<a-assets>
-		<a-asset-item id="ring" src="assets/ring.gltf"></a-asset-item>
+		<a-asset-item id="helmet" src="assets/FlightHelmet.gltf"></a-asset-item>
 	</a-assets>
 
 	
 	<!-- CONTENT AREA --> 
 	<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>  -->  
-   <a-entity gltf-model="#ring" scale="0.01 0.01 0.01" rotation="-73.969 -163.35 75.115" position="-0.237 1.042 -0.184">
+   <a-entity gltf-model="#helmet" scale="0.01 0.01 0.01" rotation="-73.969 -163.35 75.115" position="-0.237 1.042 -0.184">
    	<a-animation attribute="rotation"
                dur="10000"
                fill="forwards"
