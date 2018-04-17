@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>AR - demo</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<!-- include ar.js for A-Frame -->
 	<script src="js/aframe-ar.min.js"></script>
 	<script src="https://app.aframe.com/embed/2.0/embedder.js"></script>
@@ -19,7 +19,6 @@
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
   	<!-- ASSETS -->
   	<a-assets>
-		<a-asset-item id="ring" src="assets/ring.gltf"></a-asset-item>
 		<video id="video" src="assets/ch_k_video.mp4" webkit-playsinline autoplay loop crossorigin/>
 	</a-assets>
 
