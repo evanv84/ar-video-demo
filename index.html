@@ -7,6 +7,7 @@
 	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<!-- include ar.js for A-Frame -->
 	<script src="js/aframe-ar.min.js"></script>
+	<script src="js/iphone-inline-video.browser.js"></script>
 	<script src="https://app.aframe.com/embed/2.0/embedder.js"></script>
 	<!-- <script src='https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js'> -->
 	<script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
@@ -19,7 +20,7 @@
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
   	<!-- ASSETS -->
   	<a-assets>
-		<video id="video" src="assets/ch_k_video.mp4" webkit-playsinline playsinline autoplay loop />
+		<video id="video" src="assets/ch_k_video.mp4" webkit-playsinline playsinline crossorigin autoplay loop />
 	</a-assets>
 
 	<!-- CONTENT AREA -->  
