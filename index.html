@@ -15,6 +15,24 @@
 
 </head>
 
+<style>
+      #playoverlay { position: relative; }
+
+      #play-button {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+      }
+
+      /* Hide native iOS controls */
+      .IIV::-webkit-media-controls-play-button,
+      .IIV::-webkit-media-controls-start-playback-button {
+        opacity: 0;
+        pointer-events: none;
+        width: 5px;
+      }
+    </style>
+
 <body style='margin : 0px; overflow: hidden;'>
   <!-- <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;' > -->
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
@@ -34,5 +52,25 @@
     <a-marker-camera type='pattern' url="assets/pattern-marker.patt"></a-marker-camera>
     <!-- <a-marker-camera type='barcode' value='1'></a-marker> -->
   </a-scene>
+
+  <div id="playoverlay">
+      <button id="play-button">Play / Pause</button>
+    </div>
+
+    <script>
+      (function() {
+        var video = document.querySelector('#video');
+        window.makeVideoPlayableInline(video, /* mute necessary for autoplay*/ false);
+
+        var playButton = document.querySelector('#play-button');
+        playButton.addEventListener('click', function(e) {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
