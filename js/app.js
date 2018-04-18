@@ -6,6 +6,7 @@ $(document).ready(function() {
 	$(document).on('click', '.play-btn', function(event) {
 		event.preventDefault();
 		video.play();
+		$('.play-btn').hide();
 	});
 
 });
