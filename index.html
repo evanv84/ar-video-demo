@@ -17,9 +17,8 @@
 <style>
 	.play-btn {
 		position: fixed;
-		padding: 20px;
-		background: #FFF;
-		color: #333;
+		width: 100px;
+		height: 100px;
 		left: 50%;
 		top: 50%;
 		z-index: 9999;
@@ -28,6 +27,20 @@
 		    -ms-transform: translate(-50%, -50%);
 		     -o-transform: translate(-50%, -50%);
 		        transform: translate(-50%, -50%);
+	}
+
+	.pause-btn {
+		position: fixed;
+		width: 100px;
+		height: 100px;
+		bottom: 50px;
+		z-index: 9999;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		   -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		     -o-transform: translateX(-50%);
+		        transform: translateX(-50%);
 	}
 </style>
 
@@ -45,14 +58,15 @@
    	<a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite">
 	</a-animation>
    </a-entity> -->
-	<a-entity material="shader: chromakey; side: double; src: #video" geometry="primitive:plane; height:1.42" position="0 2 0" scale="2.461 2.461 2.461" rotation="-83.47995075056095 180.02333923010465 180.02333923010465"></a-entity>
+	<a-entity material="shader: chromakey; side: double; src: #video" geometry="primitive:plane; height:1.62" position="0 1.5 0" scale="2.461 2.461 2.461" rotation="-83 180 180"></a-entity>
 	<!-- CAMERA -->
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera type='pattern' url="assets/pattern-marker.patt"></a-marker-camera>
     <!-- <a-marker-camera type='barcode' value='1'></a-marker> -->
   </a-scene>
 
-  <a href="#" class="play-btn">PLAY</a>
+  <a href="#" class="play-btn"><img src="assets/play.svg" alt=""></a>
+  <a href="#" class="pause-btn"><img src="assets/pause.svg" alt=""></a>
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
